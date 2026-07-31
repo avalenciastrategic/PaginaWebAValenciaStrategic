@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contacto — AValencia Strategic</title>
+    <meta
+      name="description"
+      content="Contacta a AValencia Strategic para demos y consultas sobre HolaVecino, Grupo V&V Soluciones y Renta Drive."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Syne:wght@500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="icon" href="assets/images/logo-avalencia-strategic.jpeg" />
+  </head>
+  <body>
+    <div class="bg-grid" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <nav class="nav" aria-label="Principal">
+        <a class="brand" href="index.html">
+          <img
+            src="assets/images/logo-avalencia-strategic.jpeg"
+            alt="Logo AValencia Strategic"
+            width="48"
+            height="48"
+          />
+          <div class="brand-name">
+            AValencia
+            <span>Strategic</span>
+          </div>
+        </a>
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="nav-menu"
+          aria-label="Abrir menú"
+        >
+          <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-links" id="nav-menu">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="holavecino.html">HolaVecino</a></li>
+          <li><a href="grupovyv.html">Grupo V&amp;V</a></li>
+          <li><a href="rentadrive.html">Renta Drive</a></li>
+          <li><a href="contacto.html" aria-current="page">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="section">
+        <div class="wrap">
+          <p class="section-label reveal">Contacto</p>
+          <h2 class="reveal">Hablemos de tu operación</h2>
+          <p class="lead reveal reveal-delay-1">
+            Cuéntanos qué aplicación te interesa. Te respondemos desde el
+            correo de la firma.
+          </p>
+
+          <div class="contact-grid">
+            <div class="contact-panel reveal">
+              <h3>Datos directos</h3>
+              <p>
+                Correo:<br />
+                <a href="mailto:avalenciastrategic@gmail.com"
+                  >avalenciastrategic@gmail.com</a
+                >
+              </p>
+              <p style="margin-top: 1.25rem">
+                Productos:<br />
+                <a href="holavecino.html">HolaVecino</a> ·
+                <a href="grupovyv.html">Grupo V&amp;V</a> ·
+                <a href="rentadrive.html">Renta Drive</a>
+              </p>
+            </div>
+
+            <form
+              class="contact-form contact-panel reveal reveal-delay-1"
+              id="contact-form"
+            >
+              <label>
+                Nombre
+                <input type="text" name="name" required autocomplete="name" />
+              </label>
+              <label>
+                Correo
+                <input
+                  type="email"
+                  name="email"
+                  required
+                  autocomplete="email"
+                />
+              </label>
+              <label>
+                Aplicación de interés
+                <select name="app" id="app-select">
+                  <option value="Consulta general">Consulta general</option>
+                  <option value="HolaVecino">HolaVecino</option>
+                  <option value="Grupo V&V Soluciones">
+                    Grupo V&amp;V Soluciones
+                  </option>
+                  <option value="Renta Drive">Renta Drive</option>
+                </select>
+              </label>
+              <label>
+                Mensaje
+                <textarea name="message" required></textarea>
+              </label>
+              <p class="form-note">
+                Al enviar se abrirá tu cliente de correo con el mensaje listo
+                para
+                <strong>avalenciastrategic@gmail.com</strong>.
+              </p>
+              <button class="btn btn-primary" type="submit">
+                Preparar correo
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <p><strong>AValencia Strategic</strong> · Contacto</p>
+        <ul class="footer-links">
+          <li><a href="index.html">Inicio</a></li>
+          <li>
+            <a href="mailto:avalenciastrategic@gmail.com"
+              >avalenciastrategic@gmail.com</a
+            >
+          </li>
+        </ul>
+      </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script>
+      (function () {
+        var params = new URLSearchParams(window.location.search);
+        var app = params.get("app");
+        var select = document.getElementById("app-select");
+        if (!app || !select) return;
+        for (var i = 0; i < select.options.length; i++) {
+          if (select.options[i].value === app) {
+            select.selectedIndex = i;
+            break;
+          }
+        }
+      })();
+    </script>
+  </body>
+</html>
