@@ -38,20 +38,4 @@
     });
   }
 
-  var form = document.querySelector("#contact-form");
-  if (form) {
-    form.addEventListener("submit", function (e) {
-      e.preventDefault();
-      var name = form.querySelector("[name=name]").value.trim();
-      var email = form.querySelector("[name=email]").value.trim();
-      var app = form.querySelector("[name=app]").value;
-      var message = form.querySelector("[name=message]").value.trim();
-      var subject = encodeURIComponent("Consulta AValencia Strategic — " + app);
-      var body = encodeURIComponent(
-        "Nombre: " + name + "\nCorreo: " + email + "\nInterés: " + app + "\n\n" + message
-      );
-      window.location.href =
-        "mailto:avalenciastrategic@gmail.com?subject=" + subject + "&body=" + body;
-    });
-  }
 })();

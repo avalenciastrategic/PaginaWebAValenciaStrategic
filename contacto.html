@@ -6,12 +6,12 @@
     <title>Contacto — AValencia Strategic</title>
     <meta
       name="description"
-      content="Contacta a AValencia Strategic para demos y consultas sobre HolaVecino, Grupo V&V Soluciones y Renta Drive."
+      content="Contacta por HolaVecino, Renta Drive o el plan mensual de Grupo V&V con HolaVecino incluido. WhatsApp +56 9 4273 4872."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Syne:wght@500;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="assets/css/styles.css" />
@@ -46,7 +46,7 @@
         <ul class="nav-links" id="nav-menu">
           <li><a href="index.html">Inicio</a></li>
           <li><a href="holavecino.html">HolaVecino</a></li>
-          <li><a href="grupovyv.html">Grupo V&amp;V</a></li>
+          <li><a href="grupovyv.html" class="nav-offer">Mantenimiento + Software Gratis</a></li>
           <li><a href="rentadrive.html">Renta Drive</a></li>
           <li><a href="contacto.html" aria-current="page">Contacto</a></li>
         </ul>
@@ -57,68 +57,101 @@
       <section class="section">
         <div class="wrap">
           <p class="section-label reveal">Contacto</p>
-          <h2 class="reveal">Hablemos de tu operación</h2>
+          <h2 class="reveal">Elige cómo quieres empezar</h2>
           <p class="lead reveal reveal-delay-1">
-            Cuéntanos qué aplicación te interesa. Te respondemos desde el
-            correo de la firma.
+            ¿Necesitas ordenar un condominio, controlar vehículos de trabajo o
+            un plan de mantención con HolaVecino incluido? Escríbenos: te
+            respondemos con claridad, sin rodeos.
           </p>
 
           <div class="contact-grid">
             <div class="contact-panel reveal">
-              <h3>Datos directos</h3>
+              <h3>Habla ahora</h3>
               <p>
+                WhatsApp y llamada:<br />
+                <a href="tel:+56942734872">+56 9 4273 4872</a>
+              </p>
+              <div class="cta-row" style="margin-top: 1.25rem">
+                <a
+                  class="btn btn-primary"
+                  href="https://wa.me/56942734872"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Abrir WhatsApp</a
+                >
+                <a class="btn btn-ghost" href="tel:+56942734872">Llamar</a>
+              </div>
+              <p style="margin-top: 1.75rem">
                 Correo:<br />
                 <a href="mailto:avalenciastrategic@gmail.com"
                   >avalenciastrategic@gmail.com</a
                 >
               </p>
-              <p style="margin-top: 1.25rem">
-                Productos:<br />
+              <p style="margin-top: 1.5rem">
+                Herramientas:<br />
                 <a href="holavecino.html">HolaVecino</a> ·
-                <a href="grupovyv.html">Grupo V&amp;V</a> ·
                 <a href="rentadrive.html">Renta Drive</a>
+              </p>
+              <p style="margin-top: 1rem">
+                Mantención + app:<br />
+                <a href="grupovyv.html">Grupo V&amp;V (HolaVecino incluido)</a>
               </p>
             </div>
 
             <form
               class="contact-form contact-panel reveal reveal-delay-1"
-              id="contact-form"
+              id="form-contacto"
             >
-              <label>
+              <label for="nombre">
                 Nombre
-                <input type="text" name="name" required autocomplete="name" />
+                <input
+                  type="text"
+                  id="nombre"
+                  name="name"
+                  required
+                  autocomplete="name"
+                />
               </label>
-              <label>
+              <label for="correo">
                 Correo
                 <input
                   type="email"
+                  id="correo"
                   name="email"
                   required
                   autocomplete="email"
                 />
               </label>
-              <label>
-                Aplicación de interés
-                <select name="app" id="app-select">
+              <label for="motivo">
+                Motivo
+                <select name="app" id="motivo">
                   <option value="Consulta general">Consulta general</option>
-                  <option value="HolaVecino">HolaVecino</option>
-                  <option value="Grupo V&V Soluciones">
-                    Grupo V&amp;V Soluciones
+                  <option value="HolaVecino">
+                    HolaVecino — condominios
                   </option>
-                  <option value="Renta Drive">Renta Drive</option>
+                  <option value="Renta Drive">
+                    Renta Drive — vehículos de trabajo
+                  </option>
+                  <option value="Mantención Grupo V&V">
+                    Plan mensual Grupo V&amp;V + HolaVecino
+                  </option>
                 </select>
               </label>
-              <label>
+              <label for="mensaje">
                 Mensaje
-                <textarea name="message" required></textarea>
+                <textarea
+                  id="mensaje"
+                  name="message"
+                  required
+                  placeholder="Ej.: administro un condominio sin jurídica / tengo 4 autos en Uber / quiero mantención mensual…"
+                ></textarea>
               </label>
               <p class="form-note">
-                Al enviar se abrirá tu cliente de correo con el mensaje listo
-                para
-                <strong>avalenciastrategic@gmail.com</strong>.
+                ✓ Al hacer clic, te conectarás instantáneamente a nuestro
+                WhatsApp de atención oficial.
               </p>
               <button class="btn btn-primary" type="submit">
-                Preparar correo
+                Enviar consulta por WhatsApp
               </button>
             </form>
           </div>
@@ -128,14 +161,18 @@
 
     <footer class="site-footer">
       <div class="footer-inner">
-        <p><strong>AValencia Strategic</strong> · Contacto</p>
+        <p><strong>AValencia Strategic</strong> · Empezamos cuando tú digas</p>
         <ul class="footer-links">
           <li><a href="index.html">Inicio</a></li>
           <li>
-            <a href="mailto:avalenciastrategic@gmail.com"
-              >avalenciastrategic@gmail.com</a
+            <a
+              href="https://wa.me/56942734872"
+              target="_blank"
+              rel="noopener noreferrer"
+              >WhatsApp</a
             >
           </li>
+          <li><a href="tel:+56942734872">Llamar</a></li>
         </ul>
       </div>
     </footer>
@@ -145,15 +182,52 @@
       (function () {
         var params = new URLSearchParams(window.location.search);
         var app = params.get("app");
-        var select = document.getElementById("app-select");
-        if (!app || !select) return;
-        for (var i = 0; i < select.options.length; i++) {
-          if (select.options[i].value === app) {
-            select.selectedIndex = i;
-            break;
+        var select = document.getElementById("motivo");
+        if (app && select) {
+          for (var i = 0; i < select.options.length; i++) {
+            if (select.options[i].value === app) {
+              select.selectedIndex = i;
+              break;
+            }
           }
         }
       })();
+
+      document
+        .getElementById("form-contacto")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          var correo = document.getElementById("correo").value.trim();
+          var motivo = document.getElementById("motivo").value;
+          var mensaje = document.getElementById("mensaje").value.trim();
+          var nombreEl = document.getElementById("nombre");
+          var nombre = nombreEl ? nombreEl.value.trim() : "";
+
+          // numeroTelefono: WhatsApp de atención (+56 9 4273 4872)
+          var numeroTelefono = "56942734872";
+
+          var textoMensaje =
+            "¡Hola AValencia Strategic! 👋\n" +
+            "Quiero realizar una consulta desde la web.\n\n" +
+            (nombre ? "*Nombre:* " + nombre + "\n" : "") +
+            "*📩 Correo:* " +
+            correo +
+            "\n" +
+            "*🎯 Motivo:* " +
+            motivo +
+            "\n" +
+            "*✍️ Mensaje:* " +
+            mensaje;
+
+          var urlWhatsApp =
+            "https://api.whatsapp.com/send?phone=" +
+            numeroTelefono +
+            "&text=" +
+            encodeURIComponent(textoMensaje);
+
+          window.open(urlWhatsApp, "_blank", "noopener,noreferrer");
+        });
     </script>
   </body>
 </html>
